@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/churnguard/__init__.py
+src/churnguard/data.py
+src/churnguard_ai.egg-info/PKG-INFO
+src/churnguard_ai.egg-info/SOURCES.txt
+src/churnguard_ai.egg-info/dependency_links.txt
+src/churnguard_ai.egg-info/requires.txt
+src/churnguard_ai.egg-info/top_level.txt
+tests/test_data.py

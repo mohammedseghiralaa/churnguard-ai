@@ -1,0 +1,25 @@
+# Python
+pycache/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Logs
+*.log
+
+# Large model artifacts
+mlruns/
+
+# Private datasets
+data/raw/
+data/processed/
