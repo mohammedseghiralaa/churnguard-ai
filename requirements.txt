@@ -2,7 +2,7 @@ pandas
 numpy 
 scikit-learn
 xgboost
-imbalanced-lear
+imbalanced-learn
 matplotlib
 seaborn
 shap
