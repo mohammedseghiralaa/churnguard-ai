@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#131b2e", "on-error": "#ffffff", "tertiary-container": "#744800", "inverse-surface": "#283044", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#464554", "on-error-container": "#93000a", "inverse-primary": "#c3c0ff", "on-tertiary-fixed-variant": "#653e00", "error": "#ba1a1a", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#6ffbbe", "on-secondary-container": "#00714d", "inverse-on-surface": "#eef0ff", "primary-fixed": "#e3dfff", "primary-fixed-dim": "#c3c0ff", "background": "#faf8ff", "surface-container-high": "#e2e7ff", "on-secondary": "#ffffff", "outline": "#777586", "surface-container-highest": "#dae2fd", "surface": "#faf8ff", "on-secondary-fixed": "#002113", "surface-tint": "#5148d7", "primary": "#2a14b4", "tertiary": "#553300", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container": "#eaedff", "on-tertiary-container": "#ffb759", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#c1beff", "secondary-fixed-dim": "#4edea3", "surface-container-low": "#f2f3ff", "surface-dim": "#d2d9f4", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#372abf", "on-tertiary": "#ffffff", "outline-variant": "#c7c4d7", "primary-container": "#4338ca", "tertiary-fixed": "#ffddb8", "on-background": "#131b2e", "secondary-container": "#6cf8bb", "on-primary-fixed": "#100069", "on-secondary-fixed-variant": "#005236" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "space-xs": "0.375rem", "margin-desktop": "3rem", "margin-tablet": "2rem", "space-lg": "2rem", "gutter": "1.5rem", "space-md": "1.25rem", "gutter-desktop": "2rem", "space-xl": "3rem", "margin": "1rem", "space-2xl": "4.5rem" }, "fontFamily": { "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-xl": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-xl": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "label-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[960px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ChurnGuard Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XuKinqM_kswrydHhVrtuAXYBodJZhQLbJHHWAaNCTomnOyuQNDAXJZoxakxdshZDnot6YSjFsWSYFjvf_EmFgbrFQd6_YngW6qQ6ccQiCw43TDuxyC5F-MGu5Fjw9B9gRfZ_MnTY00ORAPYALsxKXpQcfoy04JsqVM3hEPUHfLr9qgU44D5XKLcQrcnb7AiUu1hvs4pNi0Ihk3jJVjkBGSeSy2Mq01qAtRqcT4rbzuGQVeP3an8yd02A"/><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">ChurnGuard</span><span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Telecom Retention AI</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Customer Risk Predictor</span></div><nav class="flex items-center gap-1" data-active-classes="bg-surface-container text-on-surface font-semibold"><a aria-current="page" class="px-3 py-1.5 rounded-full transition-colors bg-surface-container text-on-surface font-semibold" data-path="predictor" href="#">Predictor</a><a class="px-3 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="batch-analysis" href="#">Batch Analysis</a><a class="px-3 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="help-faq" href="#">Help &amp; FAQ</a></nav><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 flex-1 flex flex-col"><div class="max-w-[960px] w-full mx-auto px-gutter py-space-xl flex-1 flex flex-col justify-center"><div class="flex flex-col w-full">
+<!-- Subtle ambient background glowing accents -->
+<div class="relative w-full">
+<div class="absolute -top-12 -left-20 w-80 h-80 rounded-full bg-primary-fixed-dim/30 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-20 right-0 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none -z-10"></div>
+<!-- Screen Title Header -->
+<div class="flex flex-col items-center text-center mb-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm mb-3">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span>Single Account Retention Audit</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight max-w-xl">
+        Will this customer stay?
+      </h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant mt-2 max-w-md">
+        Fill in the customer's details to see their risk of leaving.
+      </p>
+</div>
+<!-- Stepper Indicator Component -->
+<div class="max-w-[760px] mx-auto w-full mb-space-md">
+<div class="bg-surface-container-lowest shadow-sm rounded-lg p-space-sm sm:p-space-md">
+<div class="flex items-center justify-between mb-3 px-1">
+<span class="font-label-md text-label-md text-primary font-semibold" id="step-counter-text">Step 1 of 3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium" id="step-caption-text">Customer Profile</span>
+</div>
+<!-- Progress Track -->
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden relative">
+<div class="h-full bg-primary transition-all duration-500 ease-out rounded-full" id="stepper-progress-fill" style="width: 33.33%;"></div>
+</div>
+<!-- Step Titles Pill Grid -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-1">
+<button class="step-nav-btn text-left p-2 rounded-DEFAULT transition-all flex items-center gap-2 bg-surface-container-low text-on-surface" data-step-target="1" onclick="goToStep(1)" type="button">
+<span class="step-nav-badge w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0">1</span>
+<div class="min-w-0">
+<span class="block font-label-md text-label-md font-semibold truncate">Customer</span>
+<span class="hidden sm:block font-label-sm text-label-sm text-on-surface-variant truncate">Personal profile</span>
+</div>
+</button>
+<button class="step-nav-btn text-left p-2 rounded-DEFAULT transition-all flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low" data-step-target="2" onclick="goToStep(2)" type="button">
+<span class="step-nav-badge w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">2</span>
+<div class="min-w-0">
+<span class="block font-label-md text-label-md font-medium truncate">Services</span>
+<span class="hidden sm:block font-label-sm text-label-sm text-on-surface-variant truncate">Lines &amp; addons</span>
+</div>
+</button>
+<button class="step-nav-btn text-left p-2 rounded-DEFAULT transition-all flex items-center gap-2 text-on-surface-variant hover:bg-surface-container-low" data-step-target="3" onclick="goToStep(3)" type="button">
+<span class="step-nav-badge w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">3</span>
+<div class="min-w-0">
+<span class="block font-label-md text-label-md font-medium truncate">Billing</span>
+<span class="hidden sm:block font-label-sm text-label-sm text-on-surface-variant truncate">Plan &amp; payments</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Card Deck -->
+<div class="max-w-[760px] mx-auto w-full">
+<div class="bg-surface-container-lowest shadow-md rounded-xl p-6 sm:p-10 relative">
+<!-- ==================== STEP 1: ABOUT THE CUSTOMER ==================== -->
+<section class="step-pane block space-y-space-md" id="step-pane-1">
+<!-- Step Header -->
+<div class="flex items-center justify-between pb-3">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Demographics</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-0.5">About the customer</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+</div>
+</div>
+<!-- Input 1: Gender -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+              Gender identity
+            </label>
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low p-1.5 rounded-lg" data-radio-group="gender">
+<button class="gender-btn py-3 px-3 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'gender', 'female')" type="button">
+                Female
+              </button>
+<button class="gender-btn py-3 px-3 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'gender', 'male')" type="button">
+                Male
+              </button>
+<button class="gender-btn py-3 px-3 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'gender', 'other')" type="button">
+                Non-binary / Other
+              </button>
+</div>
+</div>
+<!-- Dual Column: Senior Citizen & Partner -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Senior Citizen -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+                Senior citizen (65+)
+              </label>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1.5 rounded-lg" data-radio-group="senior">
+<button class="senior-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'senior', 'no')" type="button">
+                  No
+                </button>
+<button class="senior-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'senior', 'yes')" type="button">
+                  Yes
+                </button>
+</div>
+</div>
+<!-- Partner -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+                Has partner / spouse
+              </label>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1.5 rounded-lg" data-radio-group="partner">
+<button class="partner-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'partner', 'yes')" type="button">
+                  Yes
+                </button>
+<button class="partner-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'partner', 'no')" type="button">
+                  No
+                </button>
+</div>
+</div>
+</div>
+<!-- Dependents -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+              Has dependents (children, relatives)
+            </label>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1.5 rounded-lg max-w-sm" data-radio-group="dependents">
+<button class="dep-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'dependents', 'no')" type="button">
+                No
+              </button>
+<button class="dep-btn py-2.5 px-4 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'dependents', 'yes')" type="button">
+                Yes
+              </button>
+</div>
+</div>
+<!-- Tenure Range Slider with Visual Milestones -->
+<div class="bg-surface-container-low rounded-lg p-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+<div>
+<label class="font-label-lg text-label-lg text-on-surface font-semibold block" for="tenure-range">
+                  Customer tenure (months subscribed)
+                </label>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuous service duration</p>
+</div>
+<div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary text-on-primary shadow-sm self-start sm:self-center">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span class="font-headline-sm text-headline-sm font-bold" id="tenure-display">24 months</span>
+<span class="font-label-sm text-label-sm opacity-90" id="tenure-years">(2.0 yrs)</span>
+</div>
+</div>
+<!-- Custom Visual Slider -->
+<div class="py-2">
+<input class="w-full h-2.5 bg-surface-container-high rounded-full appearance-none cursor-pointer accent-primary" id="tenure-range" max="72" min="0" oninput="updateTenure(this.value)" type="range" value="24"/>
+</div>
+<!-- Milestones Cards -->
+<div class="grid grid-cols-3 gap-2 mt-4 pt-1">
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center transition-all opacity-50" id="tier-new">
+<span class="material-symbols-outlined text-tertiary text-[20px] block mb-0.5">person_add</span>
+<span class="block font-label-sm text-label-sm font-bold text-on-surface">New</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">&lt; 6 months</span>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center transition-all shadow-sm ring-2 ring-primary" id="tier-established">
+<span class="material-symbols-outlined text-primary text-[20px] block mb-0.5">verified_user</span>
+<span class="block font-label-sm text-label-sm font-bold text-primary">Established</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 – 3 years</span>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center transition-all opacity-50" id="tier-loyal">
+<span class="material-symbols-outlined text-secondary text-[20px] block mb-0.5">workspace_premium</span>
+<span class="block font-label-sm text-label-sm font-bold text-on-surface">Loyal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3+ years</span>
+</div>
+</div>
+</div>
+<!-- Step 2 & 3 Interactive Preview Accordions (Shows how fast they are) -->
+<div class="pt-2">
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold mb-2">Upcoming quick checks</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="cursor-pointer group p-3 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between" onclick="goToStep(2)">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Step 2: Services</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate block max-w-[150px]">Phone, Fiber, Tech Support</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-0.5 transition-transform text-[20px]">chevron_right</span>
+</div>
+<div class="cursor-pointer group p-3 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between" onclick="goToStep(3)">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Step 3: Billing</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate block max-w-[150px]">Contract &amp; Payment</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-0.5 transition-transform text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== STEP 2: THEIR SERVICES ==================== -->
+<section class="step-pane hidden space-y-space-md" id="step-pane-2">
+<div class="flex items-center justify-between pb-3">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Connectivity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-0.5">Their active services</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">cell_tower</span>
+</div>
+</div>
+<!-- Internet Type Picker -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+              Internet service connection
+            </label>
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low p-1.5 rounded-lg" data-radio-group="internetservice">
+<button class="internet-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'internetservice', 'fiber')" type="button">
+                Fiber optic
+              </button>
+<button class="internet-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'internetservice', 'dsl')" type="button">
+                DSL
+              </button>
+<button class="internet-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'internetservice', 'none')" type="button">
+                No Internet
+              </button>
+</div>
+</div>
+<!-- Phone Lines Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">
+                Phone service enabled
+              </label>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1 rounded-lg">
+<button class="py-2 px-3 rounded-DEFAULT font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'phoneservice', 'yes')" type="button">
+                  Yes
+                </button>
+<button class="py-2 px-3 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant" onclick="selectSegmented(this, 'phoneservice', 'no')" type="button">
+                  No
+                </button>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">
+                Multiple lines
+              </label>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-1 rounded-lg">
+<button class="py-2 px-3 rounded-DEFAULT font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'multilines', 'no')" type="button">
+                  No
+                </button>
+<button class="py-2 px-3 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant" onclick="selectSegmented(this, 'multilines', 'yes')" type="button">
+                  Yes
+                </button>
+</div>
+</div>
+</div>
+<!-- Value-Add Retention Addons Matrix -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<label class="font-label-lg text-label-lg text-on-surface font-semibold">
+                Protective add-ons (High loyalty drivers)
+              </label>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Reduces churn
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Tech Support (Key indicator) -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">support_agent</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tech support</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+<!-- Online Security -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Online security</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+<!-- Online Backup -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Online backup</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+<!-- Device Protection Plan -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">phonelink_setup</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Device protection</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Entertainment Services -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">live_tv</span>
+<span class="font-label-md text-label-md font-medium text-on-surface">Streaming TV</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">movie</span>
+<span class="font-label-md text-label-md font-medium text-on-surface">Streaming Movies</span>
+</div>
+<div class="flex gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== STEP 3: THEIR BILLING ==================== -->
+<section class="step-pane hidden space-y-space-md" id="step-pane-3">
+<div class="flex items-center justify-between pb-3">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Financial Agreement</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-0.5">Plan &amp; billing details</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+</div>
+<!-- Contract Terms -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+              Contract commitment
+            </label>
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low p-1.5 rounded-lg" data-radio-group="contract">
+<button class="contract-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center bg-surface-container-lowest text-primary shadow-sm font-bold" onclick="selectSegmented(this, 'contract', 'm2m')" type="button">
+                Month-to-month
+              </button>
+<button class="contract-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'contract', '1yr')" type="button">
+                One year
+              </button>
+<button class="contract-btn py-3 px-2 rounded-DEFAULT font-label-md text-label-md transition-all text-center text-on-surface-variant hover:text-on-surface" onclick="selectSegmented(this, 'contract', '2yr')" type="button">
+                Two year
+              </button>
+</div>
+</div>
+<!-- Paperless Billing Toggle -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+<div>
+<span class="block font-label-lg text-label-lg font-semibold text-on-surface">Paperless e-billing</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Sends digital statements via email</span>
+</div>
+<div class="grid grid-cols-2 gap-1 bg-surface-container p-1 rounded-full w-36">
+<button class="py-1 px-3 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold" onclick="selectMiniToggle(this, true)" type="button">Yes</button>
+<button class="py-1 px-3 rounded-full font-label-sm text-label-sm text-on-surface-variant" onclick="selectMiniToggle(this, false)" type="button">No</button>
+</div>
+</div>
+<!-- 4 Payment Method Cards -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2 font-semibold">
+              Payment method
+            </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="payment-methods-grid">
+<!-- Electronic check -->
+<button class="pay-btn p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all flex flex-col justify-between h-24" onclick="selectPaymentMethod(this)" type="button">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">account_balance</span>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Electronic</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Check</span>
+</div>
+</button>
+<!-- Mailed check -->
+<button class="pay-btn p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all flex flex-col justify-between h-24" onclick="selectPaymentMethod(this)" type="button">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">markunread_mailbox</span>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Mailed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Check</span>
+</div>
+</button>
+<!-- Bank transfer (automatic) -->
+<button class="pay-btn p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all flex flex-col justify-between h-24" onclick="selectPaymentMethod(this)" type="button">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">sync_alt</span>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Bank Auto</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transfer</span>
+</div>
+</button>
+<!-- Credit Card (automatic) - Selected -->
+<button class="pay-btn p-3 rounded-lg bg-surface-container-lowest ring-2 ring-primary text-left transition-all flex flex-col justify-between h-24 shadow-sm" onclick="selectPaymentMethod(this)" type="button">
+<span class="material-symbols-outlined text-primary text-[22px]">credit_card</span>
+<div>
+<span class="block font-label-md text-label-md font-bold text-primary">Credit Card</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Automatic</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Monthly & Total Charges Inputs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-1">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1" for="monthly-charges-input">
+                Monthly charges
+              </label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-label-lg text-label-lg font-bold text-on-surface-variant">$</span>
+<input class="w-full h-12 pl-8 pr-4 rounded-DEFAULT bg-surface-container-lowest font-headline-sm text-headline-sm font-bold text-on-surface outline-none focus:ring-2 focus:ring-primary shadow-xs" id="monthly-charges-input" step="0.05" type="number" value="70.35"/>
+</div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-1.5">Typical range: $20.00 – $118.00</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1" for="total-charges-input">
+                Total lifetime charges
+              </label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-label-lg text-label-lg font-bold text-on-surface-variant">$</span>
+<input class="w-full h-12 pl-8 pr-4 rounded-DEFAULT bg-surface-container-lowest font-headline-sm text-headline-sm font-bold text-on-surface outline-none focus:ring-2 focus:ring-primary shadow-xs" id="total-charges-input" step="0.50" type="number" value="1688.40"/>
+</div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-1.5">Calculated across 24 active months</span>
+</div>
+</div>
+</section>
+<!-- Dynamic Action Buttons Bar -->
+<div class="pt-space-lg flex items-center justify-between gap-space-sm">
+<button class="invisible inline-flex items-center gap-1.5 px-6 h-14 rounded-full font-label-lg text-label-lg font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" id="prev-step-btn" onclick="navigateStep(-1)" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="inline-flex items-center justify-center gap-2 px-8 h-14 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-[0.99] ml-auto" id="next-step-btn" onclick="navigateStep(1)" type="button">
+<span id="next-button-label">Next: Their services</span>
+<span class="material-symbols-outlined text-[22px]" id="next-button-icon">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Friendly Retention Insight Card / Trust Banner -->
+<div class="max-w-[760px] mx-auto w-full mt-space-md">
+<div class="p-4 sm:p-5 rounded-lg bg-surface-container-low flex items-start sm:items-center gap-3.5 shadow-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-bold text-on-surface">Tip:</span> High tenure (24+ months) and attached 24/7 tech support are statistically the strongest indicators of long-term telecom customer loyalty.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentStep = 1;
+  const totalSteps = 3;
+
+  function goToStep(step) {
+    if (step < 1 || step > totalSteps) return;
+    currentStep = step;
+    renderStep();
+  }
+
+  function navigateStep(direction) {
+    if (currentStep === 3 && direction === 1) {
+      // Simulate submission/prediction triggered
+      const btn = document.getElementById('next-step-btn');
+      const label = document.getElementById('next-button-label');
+      label.innerText = 'Calculating Risk...';
+      btn.classList.add('opacity-80', 'pointer-events-none');
+      setTimeout(() => {
+        label.innerText = 'Risk Score: 18% (Low Risk)';
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-secondary');
+      }, 700);
+      return;
+    }
+    currentStep += direction;
+    renderStep();
+  }
+
+  function renderStep() {
+    // Hide all panes
+    for (let i = 1; i <= totalSteps; i++) {
+      const pane = document.getElementById(`step-pane-${i}`);
+      if (pane) {
+        if (i === currentStep) {
+          pane.classList.remove('hidden');
+          pane.classList.add('block');
+        } else {
+          pane.classList.remove('block');
+          pane.classList.add('hidden');
+        }
+      }
+    }
+
+    // Update Progress bar width & indicators
+    const progressFill = document.getElementById('stepper-progress-fill');
+    const stepCounterText = document.getElementById('step-counter-text');
+    const stepCaptionText = document.getElementById('step-caption-text');
+    const prevBtn = document.getElementById('prev-step-btn');
+    const nextBtnLabel = document.getElementById('next-button-label');
+    const nextBtnIcon = document.getElementById('next-button-icon');
+
+    const captions = ['Customer Profile', 'Active Subscriptions', 'Contract & Billing'];
+    const percentages = ['33.33%', '66.66%', '100%'];
+
+    progressFill.style.width = percentages[currentStep - 1];
+    stepCounterText.innerText = `Step ${currentStep} of ${totalSteps}`;
+    stepCaptionText.innerText = captions[currentStep - 1];
+
+    // Stepper navigation tabs styling
+    document.querySelectorAll('.step-nav-btn').forEach(btn => {
+      const target = parseInt(btn.getAttribute('data-step-target'), 10);
+      const badge = btn.querySelector('.step-nav-badge');
+      if (target === currentStep) {
+        btn.classList.add('bg-surface-container-low', 'text-on-surface');
+        btn.classList.remove('text-on-surface-variant');
+        badge.classList.add('bg-primary', 'text-on-primary');
+        badge.classList.remove('bg-surface-container', 'text-on-surface-variant', 'bg-secondary');
+      } else if (target < currentStep) {
+        btn.classList.remove('bg-surface-container-low');
+        btn.classList.add('text-on-surface');
+        badge.classList.remove('bg-primary', 'bg-surface-container');
+        badge.classList.add('bg-secondary', 'text-on-secondary');
+      } else {
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+        btn.classList.add('text-on-surface-variant');
+        badge.classList.remove('bg-primary', 'bg-secondary', 'text-on-primary', 'text-on-secondary');
+        badge.classList.add('bg-surface-container', 'text-on-surface-variant');
+      }
+    });
+
+    // Back button visibility
+    if (currentStep === 1) {
+      prevBtn.classList.add('invisible');
+    } else {
+      prevBtn.classList.remove('invisible');
+    }
+
+    // Next button label & icon
+    if (currentStep === 1) {
+      nextBtnLabel.innerText = 'Next: Their services';
+      nextBtnIcon.innerText = 'arrow_forward';
+    } else if (currentStep === 2) {
+      nextBtnLabel.innerText = 'Next: Their billing';
+      nextBtnIcon.innerText = 'arrow_forward';
+    } else if (currentStep === 3) {
+      nextBtnLabel.innerText = 'Check risk score';
+      nextBtnIcon.innerText = 'auto_awesome';
+    }
+  }
+
+  // Segmented group handler
+  function selectSegmented(button, groupName, val) {
+    const parent = button.parentElement;
+    parent.querySelectorAll('button').forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      btn.classList.add('text-on-surface-variant');
+    });
+    button.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+    button.classList.remove('text-on-surface-variant');
+  }
+
+  // Mini Yes/No toggle handler
+  function selectMiniToggle(button, isYes) {
+    const track = button.parentElement;
+    track.querySelectorAll('button').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+      btn.classList.add('text-on-surface-variant');
+    });
+    button.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+    button.classList.remove('text-on-surface-variant');
+  }
+
+  // Payment method card selector
+  function selectPaymentMethod(card) {
+    const grid = document.getElementById('payment-methods-grid');
+    grid.querySelectorAll('.pay-btn').forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'ring-2', 'ring-primary', 'shadow-sm');
+      btn.classList.add('bg-surface-container-low');
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.classList.remove('text-primary');
+        icon.classList.add('text-on-surface-variant');
+      }
+      const label = btn.querySelector('.font-label-md');
+      if (label) {
+        label.classList.remove('text-primary', 'font-bold');
+        label.classList.add('text-on-surface', 'font-semibold');
+      }
+      const sub = btn.querySelector('.font-label-sm');
+      if (sub) {
+        sub.classList.remove('text-primary', 'font-medium');
+        sub.classList.add('text-on-surface-variant');
+      }
+    });
+
+    card.classList.remove('bg-surface-container-low');
+    card.classList.add('bg-surface-container-lowest', 'ring-2', 'ring-primary', 'shadow-sm');
+    const icon = card.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.classList.remove('text-on-surface-variant');
+      icon.classList.add('text-primary');
+    }
+    const label = card.querySelector('.font-label-md');
+    if (label) {
+      label.classList.remove('text-on-surface', 'font-semibold');
+      label.classList.add('text-primary', 'font-bold');
+    }
+    const sub = card.querySelector('.font-label-sm');
+    if (sub) {
+      sub.classList.remove('text-on-surface-variant');
+      sub.classList.add('text-primary', 'font-medium');
+    }
+  }
+
+  // Tenure slider interactive milestone updates
+  function updateTenure(val) {
+    const months = parseInt(val, 10);
+    const years = (months / 12).toFixed(1);
+    document.getElementById('tenure-display').innerText = `${months} ${months === 1 ? 'month' : 'months'}`;
+    document.getElementById('tenure-years').innerText = `(${years} yrs)`;
+
+    // Update estimated total charges based on $70.35 * tenure
+    const totalChargesInput = document.getElementById('total-charges-input');
+    const monthlyInput = document.getElementById('monthly-charges-input');
+    const monthly = parseFloat(monthlyInput.value) || 70.35;
+    if (totalChargesInput) {
+      totalChargesInput.value = (monthly * months).toFixed(2);
+    }
+
+    // Milestones highlight
+    const tierNew = document.getElementById('tier-new');
+    const tierEstablished = document.getElementById('tier-established');
+    const tierLoyal = document.getElementById('tier-loyal');
+
+    [tierNew, tierEstablished, tierLoyal].forEach(t => {
+      t.classList.remove('ring-2', 'ring-primary', 'opacity-100');
+      t.classList.add('opacity-50');
+    });
+
+    if (months < 12) {
+      tierNew.classList.remove('opacity-50');
+      tierNew.classList.add('ring-2', 'ring-primary', 'opacity-100');
+    } else if (months <= 36) {
+      tierEstablished.classList.remove('opacity-50');
+      tierEstablished.classList.add('ring-2', 'ring-primary', 'opacity-100');
+    } else {
+      tierLoyal.classList.remove('opacity-50');
+      tierLoyal.classList.add('ring-2', 'ring-primary', 'opacity-100');
+    }
+  }
+</script></div></main><footer class="w-full bg-surface-container-lowest/60 py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-[960px] mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left"><p class="font-body-md text-body-md text-on-surface-variant">ChurnGuard AI • Accurate customer churn predictions for telecom frontlines</p><p class="font-label-sm text-label-sm text-on-surface-variant">© 2025 ChurnGuard Inc.</p></div></footer></body></html>

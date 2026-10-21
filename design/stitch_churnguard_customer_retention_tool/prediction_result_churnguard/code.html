@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#131b2e", "on-error": "#ffffff", "tertiary-container": "#744800", "inverse-surface": "#283044", "secondary": "#006c49", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#464554", "on-error-container": "#93000a", "inverse-primary": "#c3c0ff", "on-tertiary-fixed-variant": "#653e00", "error": "#ba1a1a", "surface-bright": "#faf8ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#6ffbbe", "on-secondary-container": "#00714d", "inverse-on-surface": "#eef0ff", "primary-fixed": "#e3dfff", "primary-fixed-dim": "#c3c0ff", "background": "#faf8ff", "surface-container-high": "#e2e7ff", "on-secondary": "#ffffff", "outline": "#777586", "surface-container-highest": "#dae2fd", "surface": "#faf8ff", "on-secondary-fixed": "#002113", "surface-tint": "#5148d7", "primary": "#2a14b4", "tertiary": "#553300", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container": "#eaedff", "on-tertiary-container": "#ffb759", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#c1beff", "secondary-fixed-dim": "#4edea3", "surface-container-low": "#f2f3ff", "surface-dim": "#d2d9f4", "surface-variant": "#dae2fd", "on-primary-fixed-variant": "#372abf", "on-tertiary": "#ffffff", "outline-variant": "#c7c4d7", "primary-container": "#4338ca", "tertiary-fixed": "#ffddb8", "on-background": "#131b2e", "secondary-container": "#6cf8bb", "on-primary-fixed": "#100069", "on-secondary-fixed-variant": "#005236" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "space-xs": "0.375rem", "margin-desktop": "3rem", "margin-tablet": "2rem", "space-lg": "2rem", "gutter": "1.5rem", "space-md": "1.25rem", "gutter-desktop": "2rem", "space-xl": "3rem", "margin": "1rem", "space-2xl": "4.5rem" }, "fontFamily": { "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-xl": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-xl": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "label-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[960px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ChurnGuard Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XuKinqM_kswrydHhVrtuAXYBodJZhQLbJHHWAaNCTomnOyuQNDAXJZoxakxdshZDnot6YSjFsWSYFjvf_EmFgbrFQd6_YngW6qQ6ccQiCw43TDuxyC5F-MGu5Fjw9B9gRfZ_MnTY00ORAPYALsxKXpQcfoy04JsqVM3hEPUHfLr9qgU44D5XKLcQrcnb7AiUu1hvs4pNi0Ihk3jJVjkBGSeSy2Mq01qAtRqcT4rbzuGQVeP3an8yd02A"/><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">ChurnGuard</span><span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Telecom Retention AI</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Customer Risk Predictor</span></div><nav class="flex items-center gap-1" data-active-classes="bg-surface-container text-on-surface font-semibold"><a aria-current="page" class="px-3 py-1.5 rounded-full transition-colors bg-surface-container text-on-surface font-semibold" data-path="predictor" href="#">Predictor</a><a class="px-3 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="batch-analysis" href="#">Batch Analysis</a><a class="px-3 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="help-faq" href="#">Help &amp; FAQ</a></nav><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 flex-1 flex flex-col"><div class="max-w-[960px] w-full mx-auto px-gutter py-space-xl flex-1 flex flex-col justify-center"><div class="flex flex-col w-full">
+<div class="w-full max-w-[880px] mx-auto flex flex-col gap-space-lg">
+<!-- Header Block: Status & ID -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>Calculated just now</span>
+<span class="opacity-40">•</span>
+<span class="font-bold text-on-surface">ID: #TC-8492</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">Customer Retention Analysis</h1>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Model accuracy 94.2%</span>
+</div>
+</div>
+<!-- 1. Hero Result Card -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-8 sm:p-10 shadow-sm relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-error-container/25 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+<!-- SVG Radial Gauge -->
+<div class="relative flex items-center justify-center flex-shrink-0">
+<svg class="w-48 h-48 -rotate-90" viewbox="0 0 160 160">
+<circle class="opacity-80" cx="80" cy="80" fill="transparent" r="66" stroke="#eaedff" stroke-width="14"></circle>
+<circle class="transition-all duration-1000 ease-out" cx="80" cy="80" fill="transparent" id="gauge-circle" r="66" stroke="#ba1a1a" stroke-dasharray="414.69" stroke-dashoffset="91.23" stroke-linecap="round" stroke-width="14"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface leading-none" id="hero-gauge-percent">78%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Churn Risk</span>
+</div>
+</div>
+<!-- Descriptive Content -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left space-y-3">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">gpp_maybe</span>
+<span class="font-bold">High risk</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold">
+            This customer is likely to leave.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Without intervention, this customer will likely cancel service within the next 30 to 60 days. Early onboarding support and term restructuring can reliably reverse this outcome.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Predicted lost revenue: <strong>$840 / year</strong></span>
+</div>
+<span class="opacity-30">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+<span>Reversible within 7 days</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Column Analysis Deck -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- 2. "Why?" Card -->
+<section class="bg-surface-container-lowest rounded-lg p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Why is this customer at risk?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Top 3 machine learning drivers for #TC-8492</p>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Reason 1 -->
+<div class="flex items-start gap-4 p-3.5 rounded-DEFAULT bg-surface-container-low transition-transform hover:-translate-y-0.5">
+<div class="w-9 h-9 rounded-full bg-error-container text-error flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Month-to-month contract</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                  Short-term commitments carry 4x higher cancellation rates compared to annual agreements.
+                </p>
+</div>
+</div>
+<!-- Reason 2 -->
+<div class="flex items-start gap-4 p-3.5 rounded-DEFAULT bg-surface-container-low transition-transform hover:-translate-y-0.5">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">history_toggle_off</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Only 1 month as a customer</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                  New telecom accounts in their first 90 days are most vulnerable to competitor promotional offers.
+                </p>
+</div>
+</div>
+<!-- Reason 3 -->
+<div class="flex items-start gap-4 p-3.5 rounded-DEFAULT bg-surface-container-low transition-transform hover:-translate-y-0.5">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">No tech support plan</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                  Subscribers without assisted setup experience higher friction during home modem configuration.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded-DEFAULT px-4 py-3 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Data source: Account billing telemetry</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">SHAP Feature Impact +0.48</span>
+</div>
+</section>
+<!-- 3. "What you can do" Card -->
+<section class="bg-surface-container-lowest rounded-lg p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recommended actions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Prioritized retention strategies for this customer</p>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Action 1 -->
+<div class="flex items-start justify-between gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">loyalty</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Offer a 1-year contract discount</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Save $15/month in exchange for an annual commitment.</p>
+</div>
+</div>
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-all shadow-sm" onclick="handleActionClick(this, 'Offer Applied!')">
+                Generate offer
+              </button>
+</div>
+<!-- Action 2 -->
+<div class="flex items-start justify-between gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Include free tech support for 6 months</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Boost confidence and resolve early setup questions.</p>
+</div>
+</div>
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-primary hover:text-on-primary transition-all" onclick="handleActionClick(this, 'Support Added!')">
+                Add benefit
+              </button>
+</div>
+<!-- Action 3 -->
+<div class="flex items-start justify-between gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low">
+<div class="flex items-start gap-3.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Schedule an onboarding check-in call</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Proactively ensure fiber optic speed meets expectations.</p>
+</div>
+</div>
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-primary hover:text-on-primary transition-all" onclick="handleActionClick(this, 'Call Scheduled!')">
+                Log call
+              </button>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+            Frontline agent quota approved
+          </span>
+<span class="font-bold text-on-surface">$180 retention reserve</span>
+</div>
+</section>
+</div>
+<!-- 4. Interactive Simulator Card ("Try a change") -->
+<section class="w-full bg-surface-container-low rounded-xl p-6 sm:p-8 shadow-sm transition-all duration-300">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Try a change (What-if simulator)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">See how changing account terms lowers this customer's churn risk in real-time.</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+          Live Model Sandbox
+        </span>
+</div>
+<!-- Simulator Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+<!-- Contract Dropdown -->
+<div class="md:col-span-5 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="sim-contract">Contract Term</label>
+<div class="relative">
+<select class="w-full h-12 pl-4 pr-10 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-lg text-body-lg appearance-none cursor-pointer shadow-sm focus:outline-none" id="sim-contract" onchange="runSimulation()">
+<option value="month">Month-to-month (Current)</option>
+<option selected="" value="one-year">One year contract</option>
+<option value="two-year">Two year contract</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Tech Support Toggle -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold">Add Tech Support</label>
+<div class="flex items-center h-12 bg-surface-container-lowest p-1 rounded-DEFAULT shadow-sm">
+<button class="flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-semibold text-on-surface-variant transition-all" id="toggle-support-no" onclick="setSupportToggle(false)">
+              No
+            </button>
+<button class="flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-bold bg-primary text-on-primary shadow-sm transition-all" id="toggle-support-yes" onclick="setSupportToggle(true)">
+              Yes (+Support)
+            </button>
+</div>
+</div>
+<!-- Action Button -->
+<div class="md:col-span-3 flex flex-col justify-end">
+<span class="hidden md:block font-label-md text-label-md opacity-0 mb-1.5">Action</span>
+<button class="h-12 w-full rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary transition-all shadow-sm" onclick="runSimulation()">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span>Calculate</span>
+</button>
+</div>
+</div>
+<!-- Outcome Visual Comparison Container -->
+<div class="mt-6 pt-6 bg-surface-container-lowest rounded-lg p-5 shadow-sm">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+<!-- Baseline vs New Risk Pills -->
+<div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-around sm:justify-start">
+<div class="text-center sm:text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Current Risk</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-error">78%</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">(High)</span>
+</div>
+</div>
+<div class="flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</div>
+<div class="text-center sm:text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Simulated New Risk</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary" id="sim-new-risk-val">24%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1" id="sim-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Low Risk
+                </span>
+</div>
+</div>
+</div>
+<!-- Impact Metrics -->
+<div class="w-full sm:w-auto p-3 sm:px-5 sm:py-3 rounded-full bg-secondary-container/50 text-on-secondary-container flex items-center justify-center gap-2 font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[20px] text-secondary">shield</span>
+<span id="sim-impact-text">Churn risk reduced by 54%!</span>
+</div>
+</div>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant text-center sm:text-left" id="sim-summary-description">
+          Switching to a 1-year contract and adding tech support moves this customer firmly into the safe tier, extending expected account lifetime by 18+ months.
+        </p>
+</div>
+</section>
+<!-- 5. Bottom Navigation / Primary Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 pb-12">
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+<!-- Big Primary Indigo Button -->
+<a class="w-full sm:w-auto h-[52px] px-8 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary transition-all shadow-md" data-path="predictor" href="#">
+<span class="material-symbols-outlined text-[20px]">person_search</span>
+<span>Check another customer</span>
+</a>
+<!-- Secondary Ghost/Outline Button -->
+<a class="w-full sm:w-auto h-[52px] px-8 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm hover:bg-surface-container-high transition-all" data-path="predictor" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Back to customer details</span>
+</a>
+</div>
+<!-- Action Link: Export Summary -->
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-md text-label-md font-semibold transition-colors py-2 px-3 rounded-full hover:bg-surface-container-high" onclick="handlePrintExport()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Export / Print summary PDF</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let hasTechSupport = true;
+
+  function setSupportToggle(val) {
+    hasTechSupport = val;
+    const btnYes = document.getElementById('toggle-support-yes');
+    const btnNo = document.getElementById('toggle-support-no');
+    
+    if (val) {
+      btnYes.className = 'flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-bold bg-primary text-on-primary shadow-sm transition-all';
+      btnNo.className = 'flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-semibold text-on-surface-variant transition-all';
+    } else {
+      btnNo.className = 'flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-bold bg-primary text-on-primary shadow-sm transition-all';
+      btnYes.className = 'flex-1 h-full rounded-DEFAULT font-label-md text-label-md font-semibold text-on-surface-variant transition-all';
+    }
+    runSimulation();
+  }
+
+  function runSimulation() {
+    const contract = document.getElementById('sim-contract').value;
+    const riskElem = document.getElementById('sim-new-risk-val');
+    const badgeElem = document.getElementById('sim-badge');
+    const impactText = document.getElementById('sim-impact-text');
+    const descText = document.getElementById('sim-summary-description');
+
+    let newRisk = 78;
+
+    if (contract === 'one-year') {
+      newRisk -= 36;
+    } else if (contract === 'two-year') {
+      newRisk -= 52;
+    }
+
+    if (hasTechSupport) {
+      newRisk -= 18;
+    }
+
+    if (newRisk < 10) newRisk = 10;
+    if (newRisk > 78) newRisk = 78;
+
+    const diff = 78 - newRisk;
+    riskElem.innerText = newRisk + '%';
+
+    if (diff > 0) {
+      impactText.innerText = 'Churn risk reduced by ' + diff + '%!';
+    } else {
+      impactText.innerText = 'No projected risk reduction';
+    }
+
+    if (newRisk <= 30) {
+      riskElem.className = 'font-headline-lg text-headline-lg font-bold text-secondary';
+      badgeElem.className = 'px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1';
+      badgeElem.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Low Risk';
+    } else if (newRisk <= 55) {
+      riskElem.className = 'font-headline-lg text-headline-lg font-bold text-tertiary-container';
+      badgeElem.className = 'px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1';
+      badgeElem.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Moderate Risk';
+    } else {
+      riskElem.className = 'font-headline-lg text-headline-lg font-bold text-error';
+      badgeElem.className = 'px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1';
+      badgeElem.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-error"></span> High Risk';
+    }
+
+    let summaryParts = [];
+    if (contract === 'one-year') summaryParts.push('a 1-year contract');
+    else if (contract === 'two-year') summaryParts.push('a 2-year contract');
+    else summaryParts.push('month-to-month terms');
+
+    if (hasTechSupport) summaryParts.push('adding tech support');
+    else summaryParts.push('without tech support');
+
+    descText.innerText = 'Switching to ' + summaryParts.join(' and ') + ' drives the simulated retention probability to ' + (100 - newRisk) + '%.';
+  }
+
+  function handleActionClick(btn, confirmedText) {
+    const originalText = btn.innerText;
+    btn.innerText = confirmedText;
+    btn.disabled = true;
+    btn.classList.add('opacity-75');
+    setTimeout(() => {
+      btn.innerText = originalText;
+      btn.disabled = false;
+      btn.classList.remove('opacity-75');
+    }, 2400);
+  }
+
+  function handlePrintExport() {
+    window.print();
+  }
+</script></div></main><footer class="w-full bg-surface-container-lowest/60 py-space-md mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-[960px] mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left"><p class="font-body-md text-body-md text-on-surface-variant">ChurnGuard AI • Accurate customer churn predictions for telecom frontlines</p><p class="font-label-sm text-label-sm text-on-surface-variant">© 2025 ChurnGuard Inc.</p></div></footer></body></html>
