@@ -10,3 +10,5 @@ def prepare_data(path:str|Path)->tuple[pd.DataFrame,pd.DataFrame,pd.Series,pd.Se
     X,Y=split_features_target(df)
     X_train,X_test,Y_train,Y_test=splite_data(X,Y)
     return X_train,X_test,Y_train,Y_test
+
+

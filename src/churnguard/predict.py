@@ -4,9 +4,9 @@ import joblib
 import pandas as pd 
 
 ARTIFACTS_DIR = Path(__file__).resolve().parents[2] / "artifacts"
-
-RISK_HIGH = 0.7
-RISK_MEDIUM = 0.4
+THRESHOLD=0.3
+RISK_HIGH = 0.5
+RISK_MEDIUM = THRESHOLD
 
 
 @lru_cache(maxsize=4)
@@ -32,7 +32,7 @@ def predict_churn(customer_data:dict,model_name:str)->dict:
     customer_df=pd.DataFrame([customer_data])
 
     probability=float(model.predict_proba(customer_df)[0][1])
-    prediction=probability>=0.5
+    prediction=probability>=THRESHOLD
 
     return {
        "prediction": "Churn" if prediction == 1 else "No Churn",
