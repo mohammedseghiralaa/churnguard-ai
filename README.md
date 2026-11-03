@@ -1,61 +1,70 @@
-# ChurnGuard — Customer Churn Prediction
+# ChurnGuard: Customer Churn Prediction
 
-## Overview
+An end-to-end machine learning project that predicts whether a telecom customer is likely to leave, with a FastAPI backend and a Next.js dashboard.
 
-ChurnGuard is a machine learning project that predicts whether a telecom customer is likely to leave a service. It provides churn predictions, churn probabilities, and risk classifications through a Python prediction module and a FastAPI REST API.
+![Dashboard screenshot](images/dashboard.png)
 
-## Features
+## Problem
 
-- Data preprocessing and feature engineering
-- Machine learning model training and comparison
-- Hyperparameter tuning
-- CatBoost-based churn prediction
-- Churn probability and risk classification
-- FastAPI endpoint for predictions
-- Basic prediction validation tests
+Telecom companies lose revenue when customers leave. ChurnGuard predicts which customers are at risk, so the company can contact them before they go. The model is tuned for **high recall**: it is better to flag too many customers than to miss one who will leave.
 
-## Tech Stack
+## Dataset
 
-- Python
-- Pandas
-- Scikit-learn
-- CatBoost
-- XGBoost
-- FastAPI
-- Pydantic
-- Joblib
-- Pytest (if configured and used)
+[Telco Customer Churn](https://www.kaggle.com/) (IBM sample data, 7,043 customers). Search "Telco Customer Churn" on Kaggle, download the CSV, and place it at `data/WA_Fn-UseC_-Telco-Customer-Churn.csv`.
 
-## Project Structure
+## Approach
 
-```text
+1. Preprocessing and feature engineering (`src/churnguard/prepare.py`)
+2. Four models compared: Logistic Regression, Random Forest, CatBoost, XGBoost
+3. Hyperparameter tuning with cross-validation (`scripts/tune.py`)
+4. Final model: **CatBoost**, decision threshold **0.30**
+
+## Results (test set)
+
+| Model               | CV ROC-AUC | Test ROC-AUC |
+| ------------------- | ---------- | ------------ |
+| Logistic Regression | 0.843      | 0.856        |
+| Random Forest       | 0.844      | 0.856        |
+| **CatBoost**        | **0.848**  | **0.863**    |
+| XGBoost             | 0.845      | 0.863        |
+
+CatBoost at threshold 0.30: precision 0.556, recall 0.781, F1 0.65.
+
+## Project structure
+
+```
 Telco_churn/
-├── data/
-├── artifacts/
-├── src/
-│   └── churnguard/
-│       ├── api.py
-│       ├── predict.py
-│       ├── model.py
-│       └── ...
-├── tests/
-│   └── test_prediction.py
+├── src/churnguard/   # preprocessing, training, prediction, API
+├── scripts/          # tuning and manual checks
+├── tests/            # automated tests
+├── dashboard/        # Next.js front end
+├── design/           # UI design files
+├── artifacts/        # trained models
+├── data/             # dataset (not committed)
+├── app.py            # API entry point (used by Docker)
+├── Dockerfile
 └── README.md
 ```
 
-## Run the API
+## How to run
 
-Install the required dependencies, then run from the project root:
+### With Docker
 
 ```bash
-uvicorn churnguard.api:app --reload --app-dir src
+docker build -t churnguard .
+docker run -p 8000:8000 churnguard
 ```
 
-Open the interactive API documentation at:
+### Without Docker
 
-http://127.0.0.1:8000/docs
+```bash
+pip install -r requirements.txt
+uvicorn app:app --reload
+```
 
-## Example Prediction
+API docs: http://127.0.0.1:8000/docs
+
+## Example prediction
 
 ```json
 {
@@ -65,12 +74,10 @@ http://127.0.0.1:8000/docs
 }
 ```
 
-The example illustrates the API output format. Predictions are estimates, not guarantees.
+## Tech stack
 
-## Dataset
-
-The project uses the Telco Customer Churn dataset. The dataset is not included in this example README; provide instructions for obtaining it if it is not committed to the repository.
+Python, Pandas, Scikit-learn, CatBoost, XGBoost, FastAPI, Pydantic, Joblib, Pytest, Docker, Next.js, TypeScript
 
 ## Disclaimer
 
-This project is for educational and demonstration purposes. Predictions should not be treated as guarantees of customer behavior.
+Educational project. Predictions are estimates, not guarantees of customer behavior.
